@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Graphs_and_trees")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+501640245c97b1019a2588039552d8957dae58f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c793853565f54b2f695df7008f46a3a6bfbe2d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Graphs_and_trees")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Graphs_and_trees")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

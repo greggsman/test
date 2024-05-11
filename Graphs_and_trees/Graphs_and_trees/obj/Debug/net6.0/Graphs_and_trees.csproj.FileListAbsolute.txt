@@ -1,0 +1,15 @@
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/bin/Debug/net6.0/Graphs_and_trees
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/bin/Debug/net6.0/Graphs_and_trees.deps.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/bin/Debug/net6.0/Graphs_and_trees.runtimeconfig.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/bin/Debug/net6.0/Graphs_and_trees.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/bin/Debug/net6.0/Graphs_and_trees.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.AssemblyInfoInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.AssemblyInfo.cs
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.csproj.CoreCompileInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.sourcelink.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/refint/Graphs_and_trees.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/Graphs_and_trees.genruntimeconfig.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Graphs_and_trees/Graphs_and_trees/obj/Debug/net6.0/ref/Graphs_and_trees.dll

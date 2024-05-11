@@ -129,14 +129,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        /*
         Binarytree<string> family = new Binarytree<string>(-1, "Livia");
         family.nodes.AddRange(new List<string>() { "Tony", "Janice", "Meadow", "AJ" });
         family.leftIndexes = new List<int>() { 1, 3, -1, -1, -1};
         family.rightIndexes = new List<int>() { 2, 4, -1, -1, -1};
         family.AddNode("Paulie");
         family.PreOrderTraversal(0);
-        */
         Console.WriteLine("Hello world from the graphs file");
     }
 }
