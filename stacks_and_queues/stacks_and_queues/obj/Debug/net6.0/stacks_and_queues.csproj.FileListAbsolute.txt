@@ -1,0 +1,14 @@
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/bin/Debug/net6.0/stacks_and_queues
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/bin/Debug/net6.0/stacks_and_queues.deps.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/bin/Debug/net6.0/stacks_and_queues.runtimeconfig.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/bin/Debug/net6.0/stacks_and_queues.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/bin/Debug/net6.0/stacks_and_queues.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.AssemblyInfoInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.AssemblyInfo.cs
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.csproj.CoreCompileInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/refint/stacks_and_queues.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.genruntimeconfig.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/ref/stacks_and_queues.dll
