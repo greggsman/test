@@ -12,3 +12,4 @@
 /Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.pdb
 /Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.genruntimeconfig.cache
 /Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/ref/stacks_and_queues.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/stacks_and_queues/stacks_and_queues/obj/Debug/net6.0/stacks_and_queues.sourcelink.json
