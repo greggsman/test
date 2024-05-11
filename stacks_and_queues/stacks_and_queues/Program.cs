@@ -69,31 +69,6 @@ class CircularQueue<T> : Queue<T>{
         endPointer++;
     }
 }
-class StringPriorityQueue{
-    private Dictionary<string, int> nodes_with_weights;
-    private int startPointer;
-    private int endPointer;
-    public StringPriorityQueue(){
-        nodes_with_weights = new Dictionary<string, int>();
-        startPointer = 0;
-        endPointer = 0;
-    }
-    public bool IsEmpty(){
-        if(startPointer == endPointer){
-            return true;
-        }
-        return false;
-    }
-    private void Push(string item, int priority){
-        KeyValuePair<string, int> kvpToAdd = new KeyValuePair<string, int>(item, priority);        
-        if(IsEmpty()){
-            
-        }
-    }
-    private void Pop(){
-
-    }
-}
 class PriorityQueue<T> : Queue<T>{
     // higher priority = higher value
     private List<int> associatedPriorities;
@@ -102,18 +77,27 @@ class PriorityQueue<T> : Queue<T>{
     }
     public void Push(T itemToAdd, int priority)
     {
-        if(startPointer == endPointer){
-            items[startPointer] = itemToAdd;
-            associatedPriorities[startPointer] = priority;
-        }
         int tempPointer = endPointer;
         while(tempPointer != startPointer){
-            if(priority > associatedPriorities[tempPointer]){ // if its a higher priority
-                
+            tempPointer++;
+            if(priority <= associatedPriorities[tempPointer]){
+                items[tempPointer + 1] = itemToAdd;
+                associatedPriorities[tempPointer + 1] = priority;
             }
             else{
-
+                for(int i = items.Count - 1; i > tempPointer; i--){
+                    T itemToMove = items[i];
+                    try{                        
+                        items[i+1] = itemToMove;
+                    }
+                    catch(ArgumentOutOfRangeException){
+                        items.Add(itemToMove);
+                    }
+                }
             }
+        }
+        if(tempPointer == startPointer){
+            items[startPointer] = itemToAdd;
         }
         endPointer++;
     }
