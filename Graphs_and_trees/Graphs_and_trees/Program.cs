@@ -6,12 +6,14 @@ using System.Formats.Asn1;
 using System.Reflection;
 using System.Xml;
 
-class graph<T, weight> 
-// weight is either int or boolean, depending on whether it should be weighted or not
+class graph<T, weight> // weight is either int or boolean, depending on whether it should be weighted or not
 {
+    // This graph uses an adjacency matrix
+    // This is a directed graph so it will only store one data point per connection
+    // Adjacencies can be identified much more quickly than when using an adjacency list
+    // Better for dense graphs
     public List<T> nodes;
     public List<List<weight>> adjacencyMatrix;
-    // alternative to an adjacency list
     private weight defaultValue;
     public graph(List<T> nodes, weight defaultValue)
     {
@@ -69,17 +71,19 @@ class UndirectedGraph<T, weight> : graph<T, weight>
         base.SetConnection(j, i, value);
     }
 }
-class Graph_with_adjacency_list<T> {
+class AdjacencyListGraph<T> {
     // Only stores data at adjacencies
-    // 
-    private Dictionary<T, List<int>> adjacencyList = new Dictionary<T, List<int>>();
-    public Graph_with_adjacency_list() {
+    // Has to check whether a connections exists rather than just look it up
+    // Better for sparse graphs
+    // This is also an directed graph and its unweighted
+    protected Dictionary<T, List<int>> adjacencyList = new Dictionary<T, List<int>>();
+    public AdjacencyListGraph() {
         adjacencyList = new Dictionary<T, List<int>>();
     }
     public void AddNode(T additem){
         adjacencyList.Add(additem, new List<int>());
     }
-    public void SetConnections(T listPoint, int[] indicies){
+    public virtual void SetConnections(T listPoint, int[] indicies){
         adjacencyList[listPoint].AddRange(indicies);
     }
     public void PrintAdjacencyList(){
@@ -90,6 +94,15 @@ class Graph_with_adjacency_list<T> {
                 Console.Write(" {0},", adjacencyList.ElementAt(index).Key);
             }
             Console.WriteLine();
+        }
+    }
+}
+class UndirectedAdjacencyList<T> : AdjacencyListGraph<T>{
+    public override void SetConnections(T listPoint, int[] indicies) {
+        base.SetConnections(listPoint, indicies);
+        int listPointIndex = adjacencyList.Keys.ToList().IndexOf(listPoint);
+        foreach(int index in indicies){
+            adjacencyList.ElementAt(index).Value.Add(listPointIndex);
         }
     }
 }
@@ -168,7 +181,7 @@ class Program
         Console.WriteLine("Hello world from the graphs file");
         */
 
-        Graph_with_adjacency_list<string> sparse_graph = new Graph_with_adjacency_list<string>();
+        AdjacencyListGraph<string> sparse_graph = new AdjacencyListGraph<string>();
         sparse_graph.AddNode("Baker Street");
         sparse_graph.AddNode("Great Portland Street");
         sparse_graph.AddNode("St John's wood");
