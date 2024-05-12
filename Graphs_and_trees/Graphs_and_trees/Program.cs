@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Data.Common;
+using System.Formats.Asn1;
+using System.Reflection;
 using System.Xml;
 
-class myGraph<T, weight> 
+class graph<T, weight> 
+// weight is either int or boolean, depending on whether it should be weighted or not
 {
     public List<T> nodes;
-    public List<List<weight>> adjancencyMatrix = new List<List<weight>>();
+    public List<List<weight>> adjacencyMatrix;
     // alternative to an adjacency list
     private weight defaultValue;
-    public myGraph(List<T> nodes, weight defaultValue)
+    public graph(List<T> nodes, weight defaultValue)
     {
+        adjacencyMatrix = new List<List<weight>>();
         this.nodes = nodes;
         this.defaultValue = defaultValue;
         for(int i  = 0; i < nodes.Count; i++)
@@ -19,9 +23,10 @@ class myGraph<T, weight>
             AddColumnToEdges();
         }
     }
-    public myGraph(List<T> nodes, List<List<weight>> edges)
+    public graph(List<T> nodes, List<List<weight>> adjacencyMatrix)
     {
-        this.adjancencyMatrix = edges;
+        this.nodes = nodes;
+        this.adjacencyMatrix = adjacencyMatrix;
     }
     private void AddColumnToEdges()
     {
@@ -30,21 +35,21 @@ class myGraph<T, weight>
         {
             column.Add(defaultValue);
         }
-        adjancencyMatrix.Add(column);
+        adjacencyMatrix.Add(column);
     }
     public void AddNode(T node)
     {
         nodes.Add(node);
         AddColumnToEdges();
     }
-    public weight GetConnection(int i, int j) { return adjancencyMatrix[i][j]; }
+    public weight GetConnection(int i, int j) { return adjacencyMatrix[i][j]; }
     public virtual void SetConnection(int i, int j, weight value) 
     { 
-        adjancencyMatrix[i][j] = value;
+        adjacencyMatrix[i][j] = value;
     }
     public void GetConnections()
     {
-        for(int i = 0; i < adjancencyMatrix.Count; i++)
+        for(int i = 0; i < adjacencyMatrix.Count; i++)
         {
             for(int j = 0; j < nodes.Count; j++)
             {
@@ -54,7 +59,7 @@ class myGraph<T, weight>
         }
     }
 }
-class UndirectedGraph<T, weight> : myGraph<T, weight>
+class UndirectedGraph<T, weight> : graph<T, weight>
 {
     public UndirectedGraph(List<T> nodes, weight defaultValue) : base(nodes, defaultValue) { }
     public UndirectedGraph(List<T> nodes, List<List<weight>> edges) : base(nodes, edges) { }
@@ -62,6 +67,30 @@ class UndirectedGraph<T, weight> : myGraph<T, weight>
     {
         base.SetConnection(i, j, value);
         base.SetConnection(j, i, value);
+    }
+}
+class Graph_with_adjacency_list<T> {
+    // Only stores data at adjacencies
+    // 
+    private Dictionary<T, List<int>> adjacencyList = new Dictionary<T, List<int>>();
+    public Graph_with_adjacency_list() {
+        adjacencyList = new Dictionary<T, List<int>>();
+    }
+    public void AddNode(T additem){
+        adjacencyList.Add(additem, new List<int>());
+    }
+    public void SetConnections(T listPoint, int[] indicies){
+        adjacencyList[listPoint].AddRange(indicies);
+    }
+    public void PrintAdjacencyList(){
+        foreach(KeyValuePair<T, List<int>> kvp in adjacencyList){
+            Console.Write(kvp.Key + ":");
+            List<int> adjacencies = kvp.Value;
+            foreach(int index in adjacencies){
+                Console.Write(" {0},", adjacencyList.ElementAt(index).Key);
+            }
+            Console.WriteLine();
+        }
     }
 }
 class Binarytree<T>
@@ -129,6 +158,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        /*
         Binarytree<string> family = new Binarytree<string>(-1, "Livia");
         family.nodes.AddRange(new List<string>() { "Tony", "Janice", "Meadow", "AJ" });
         family.leftIndexes = new List<int>() { 1, 3, -1, -1, -1};
@@ -136,5 +166,13 @@ class Program
         family.AddNode("Paulie");
         family.PreOrderTraversal(0);
         Console.WriteLine("Hello world from the graphs file");
+        */
+
+        Graph_with_adjacency_list<string> sparse_graph = new Graph_with_adjacency_list<string>();
+        sparse_graph.AddNode("Baker Street");
+        sparse_graph.AddNode("Great Portland Street");
+        sparse_graph.AddNode("St John's wood");
+        sparse_graph.SetConnections("Baker Street", new int[2] {1, 2});
+        sparse_graph.PrintAdjacencyList();
     }
 }
