@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "X8fx1igo9qWu7txyd19J5DXAJitzFlGW5+70oahZyUUEeGd5zoFKzc/TiSG5XCMPfpHiAAzLIqtM6i72unAzUQ==",
+  "success": true,
+  "projectFilePath": "/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/hash_tables/hash_tables/hash_tables.csproj",
+  "expectedPackageFiles": [
+    "/Users/alancgregg/.nuget/packages/microsoft.netcore.app.ref/6.0.29/microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "/Users/alancgregg/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.29/microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "/Users/alancgregg/.nuget/packages/microsoft.netcore.app.host.osx-arm64/6.0.29/microsoft.netcore.app.host.osx-arm64.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}
