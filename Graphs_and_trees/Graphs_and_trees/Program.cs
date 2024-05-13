@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Configuration.Assemblies;
 using System.Data.Common;
 using System.Formats.Asn1;
 using System.Reflection;
 using System.Xml;
-
 class graph<T, weight> // weight is either int or boolean, depending on whether it should be weighted or not
 {
     // This graph uses an adjacency matrix

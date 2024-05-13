@@ -1,0 +1,15 @@
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/bin/Debug/net8.0/graph_traversal
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/bin/Debug/net8.0/graph_traversal.deps.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/bin/Debug/net8.0/graph_traversal.runtimeconfig.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/bin/Debug/net8.0/graph_traversal.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/bin/Debug/net8.0/graph_traversal.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.AssemblyInfoInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.AssemblyInfo.cs
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.csproj.CoreCompileInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.sourcelink.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/refint/graph_traversal.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/graph_traversal.genruntimeconfig.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/graph_traversal_with_unweighted_graphs/graph_traversal/obj/Debug/net8.0/ref/graph_traversal.dll
