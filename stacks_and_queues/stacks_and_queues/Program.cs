@@ -1,6 +1,64 @@
 ﻿using System.Drawing;
 using System.Net.Security;
 
+namespace stacks_and_queues{
+    public class Stack<T>{
+        protected List<T> items;
+        protected int endPointer;
+        public Stack(){
+            items = new List<T>();
+            endPointer = 0;
+        }
+        public virtual void Push(T itemToAdd){
+            try{
+                items[endPointer] = itemToAdd;
+            }
+            catch(ArgumentOutOfRangeException){
+                items.Add(itemToAdd);
+            }
+            endPointer++;
+        }
+        public virtual T Peek(){
+            return items[endPointer];
+        }
+        public virtual T Pop(){
+            T itemToPush = items[endPointer - 1];
+            items.RemoveAt(endPointer - 1);
+            endPointer--;
+            return itemToPush;
+        }
+        public virtual int GetLength(){
+            return items.Count;
+        }
+    }
+    public class Queue<T> : Stack<T>{
+        protected int startPointer;
+        public Queue() : base(){
+            startPointer = 0;
+        }
+        public override T Peek()
+        {
+            return items[startPointer];
+        }
+        public override T Pop()
+        {
+            T itemToPop = items[startPointer];
+            items.RemoveAt(startPointer);
+            endPointer--;
+            return itemToPop;
+        }
+        public bool IsEmpty(){
+            if(startPointer == endPointer){
+                return true;
+            }
+            return false;
+        }
+        public override int GetLength()
+        {
+            return endPointer - startPointer;
+        }
+    }
+}
 class Stack<T>{
     protected List<T> items;
     protected int endPointer;

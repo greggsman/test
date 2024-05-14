@@ -1,4 +1,62 @@
-﻿class UnweightedStringGraph{
+﻿using System.Runtime.CompilerServices;
+using System.Runtime.Versioning;
+public class Stack<T>{
+    protected List<T> items;
+    protected int endPointer;
+    public Stack(){
+        items = new List<T>();
+        endPointer = 0;
+    }
+    public virtual void Push(T itemToAdd){
+        try{
+            items[endPointer] = itemToAdd;
+        }
+        catch(ArgumentOutOfRangeException){
+            items.Add(itemToAdd);
+        }
+        endPointer++;
+    }
+    public virtual T Peek(){
+        return items[endPointer];
+    }
+    public virtual T Pop(){
+        T itemToPush = items[endPointer - 1];
+        items.RemoveAt(endPointer - 1);
+        endPointer--;
+        return itemToPush;
+    }
+    public virtual int GetLength(){
+        return items.Count;
+    }
+}
+public class my_Queue<T> : Stack<T>{
+    protected int startPointer;
+    public my_Queue() : base(){
+        startPointer = 0;
+    }
+    public override T Peek()
+    {
+        return items[startPointer];
+    }
+    public override T Pop()
+    {
+        T itemToPop = items[startPointer];
+        items.RemoveAt(startPointer);
+        endPointer--;
+        return itemToPop;
+    }
+    public bool IsEmpty(){
+        if(startPointer == endPointer){
+            return true;
+        }
+        return false;
+    }
+    public override int GetLength()
+    {
+        return endPointer - startPointer;
+    }
+}
+class UnweightedStringGraph{
     public List<string> nodes;
     public List<List<bool>> adjacencyMatrix;
     private bool defaultValue;
@@ -86,8 +144,7 @@
         visitedMatrix[nodeIndex] = true;
         // Look at each node, check for route
         for(int i = 0; i < nodes.Count; i++){
-            // Check for route
-            // Console.WriteLine("Checking node {0}, Connection: {1}", nodes[i], GetConnection(nodeIndex, i));
+            // Check for a route (a connection)
             if(GetConnection(nodeIndex, i) == true){
                 // Check if node has been visited
                 if(visitedMatrix[i] == false){
@@ -97,7 +154,26 @@
         }
     }
     public void BreadthFirstTraversal(){
-        
+        visitedMatrix = new bool[nodes.Count];
+        for(int i = 0; i < visitedMatrix.Length; i++){
+            visitedMatrix[i] = false;
+        }
+        my_Queue<int> indexQueue = new my_Queue<int>();
+        int currentIndex = 0;
+        indexQueue.Push(currentIndex);
+        visitedMatrix[currentIndex] = true;
+        while(!indexQueue.IsEmpty()){
+            currentIndex = indexQueue.Pop();
+            Console.Write(nodes[currentIndex]);
+            for(int i = 0; i < nodes.Count; i++){
+                if(GetConnection(currentIndex, i)){
+                    if(visitedMatrix[i] == false){
+                        visitedMatrix[i] = true;
+                        indexQueue.Push(i);
+                    }
+                }
+            }
+        }
     }
 }
 class Program{
@@ -107,9 +183,13 @@ class Program{
         usg.SetConnection("B", "C", true);
         usg.SetConnection("D", "C", true);
         usg.SetConnection("D", "E", true);
+        usg.SetConnection("E", "B", true);
         usg.PrintAdjacencyMatrix();
 
         Console.WriteLine();
         usg.DepthFirstTraversal(0);
+
+        Console.WriteLine();
+        usg.BreadthFirstTraversal();
     }
 }

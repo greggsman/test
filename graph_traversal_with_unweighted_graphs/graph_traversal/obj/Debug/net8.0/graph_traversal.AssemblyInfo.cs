@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("graph_traversal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e54da334d37d06219bae9c916c93cf17efe7aa6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a89578f3af45c3fb1635764c3d7da268910b9eff")]
 [assembly: System.Reflection.AssemblyProductAttribute("graph_traversal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("graph_traversal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
