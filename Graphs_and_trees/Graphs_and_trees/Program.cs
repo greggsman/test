@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Configuration.Assemblies;
+using System.Data;
 using System.Data.Common;
 using System.Formats.Asn1;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Xml;
 class graph<T, weight> // weight is either int or boolean, depending on whether it should be weighted or not
 {
@@ -106,17 +108,16 @@ class UndirectedAdjacencyList<T> : AdjacencyListGraph<T>{
         }
     }
 }
-class Binarytree<T>
+class Binarytree
 {
-    public List<T> nodes;
+    public List<string> nodes;
     public List<int> leftIndexes;
     public List<int> rightIndexes;
 
-    int defaultIndex;
-    public Binarytree(int defaultValue, T root)
+    protected int defaultIndex;
+    public Binarytree(int defaultValue, string root)
     {
-        // this is a bit shit so the alternative method is using a Dictionary<T, List<T>> where T is the type you're using and the list represents the children for each element in the tree
-        nodes = new List<T>();
+        nodes = new List<string>();
         leftIndexes = new List<int>();
         rightIndexes = new List<int>();
 
@@ -125,7 +126,7 @@ class Binarytree<T>
         leftIndexes.Add(defaultIndex);
         rightIndexes.Add(defaultIndex);
     }
-    public void AddNode(T additem)
+    public virtual void AddNode(string additem)
     {
         nodes.Add(additem);
         leftIndexes.Add(defaultIndex);
@@ -167,25 +168,81 @@ class Binarytree<T>
         }
     }
 }
+/*
+class BinarySearchTree{
+    private string[] nodes;
+    private int[] leftIndexes;
+    private int[] rightIndexes;
+    private int defaultIndex;
+    private string defaultNode;
+    public BinarySearchTree(int size, int defaultIndex, string defaultNode){
+        nodes = new string[size];
+        leftIndexes = new int[size];
+        rightIndexes = new int[size];
+        for(int i = 0; i < size; i++){
+            nodes[i] = defaultNode;
+            leftIndexes[i] = defaultIndex;
+            rightIndexes[i] = defaultIndex;
+        }
+        this.defaultIndex = defaultIndex;
+        this.defaultNode = defaultNode;
+    }
+    public void AddNode(string additem){
+        if()
+    }
+}
+*/
+class BinarySearchTree : Binarytree{
+    private string defaultNode;
+    public BinarySearchTree(int defaultValue, string root) : base(defaultValue, root){
+    }
+    public override void AddNode(string additem)
+    {
+        int newNodePosition = nodes.Count;
+        nodes.Add(additem);
+        leftIndexes.Add(defaultIndex);
+        rightIndexes.Add(defaultIndex);
+        bool placeFound = false;
+        int currentNodeIndex = 0;
+        try{
+            while(!placeFound){
+                int comparison = string.Compare(additem, nodes[currentNodeIndex]);
+                if(comparison < 0){
+                    if(leftIndexes[currentNodeIndex] == defaultIndex){
+                        placeFound = true;
+                        leftIndexes[currentNodeIndex] = newNodePosition;
+                    }
+                    else{
+                        currentNodeIndex = leftIndexes[currentNodeIndex];
+                    }
+                }
+                else{
+                    if(rightIndexes[currentNodeIndex] == defaultIndex){
+                        placeFound = true;
+                        rightIndexes[currentNodeIndex] = newNodePosition;
+                    }
+                    else{
+                        currentNodeIndex = rightIndexes[currentNodeIndex];
+                    }
+                }
+            }
+        }
+        catch{
+            Console.WriteLine("Error occured, currentNodeIndex: {0}, additem: {1}", currentNodeIndex, additem);
+        }
+    }
+}
 class Program
 {
     static void Main(string[] args)
     {
-        /*
-        Binarytree<string> family = new Binarytree<string>(-1, "Livia");
-        family.nodes.AddRange(new List<string>() { "Tony", "Janice", "Meadow", "AJ" });
-        family.leftIndexes = new List<int>() { 1, 3, -1, -1, -1};
-        family.rightIndexes = new List<int>() { 2, 4, -1, -1, -1};
-        family.AddNode("Paulie");
-        family.PreOrderTraversal(0);
-        Console.WriteLine("Hello world from the graphs file");
-        */
+        BinarySearchTree bst = new BinarySearchTree(-1, "M");
+        bst.AddNode("A");
+        bst.AddNode("Z");
+        bst.AddNode("B");
+        bst.AddNode("F");
+        bst.AddNode("Q");
 
-        AdjacencyListGraph<string> sparse_graph = new AdjacencyListGraph<string>();
-        sparse_graph.AddNode("Baker Street");
-        sparse_graph.AddNode("Great Portland Street");
-        sparse_graph.AddNode("St John's wood");
-        sparse_graph.SetConnections("Baker Street", new int[2] {1, 2});
-        sparse_graph.PrintAdjacencyList();
+        bst.PrintAdjacencyList();
     }
 }
