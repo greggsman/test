@@ -1,0 +1,15 @@
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/bin/Debug/net8.0/Djikstra
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/bin/Debug/net8.0/Djikstra.deps.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/bin/Debug/net8.0/Djikstra.runtimeconfig.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/bin/Debug/net8.0/Djikstra.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/bin/Debug/net8.0/Djikstra.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.AssemblyInfoInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.AssemblyInfo.cs
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.csproj.CoreCompileInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.sourcelink.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/refint/Djikstra.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/Djikstra.genruntimeconfig.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/Djikstra/Djikstra/obj/Debug/net8.0/ref/Djikstra.dll
