@@ -234,9 +234,10 @@ class BinarySearchTree : Binarytree{
         }
     }
     public void SearchFor(string item){
-        string currentNode = rootNode;
+        string currentNode;
         int position = 0;
         while(position != defaultIndex){
+            currentNode = nodes[position]; 
             int comparison = string.Compare(item, currentNode);
             if(comparison == 0){
                 Console.WriteLine("Found {0} at position {1}", item, position);
@@ -248,7 +249,6 @@ class BinarySearchTree : Binarytree{
             else{ // comparison > 0
                 position = rightIndexes[position];
             }
-            currentNode = nodes[position]; 
         }
         Console.WriteLine("Couldn't find ur stupid item lol");
     }
@@ -266,6 +266,6 @@ class Program
 
         bst.PrintAdjacencyList();
         
-        bst.SearchFor("B");
+        bst.SearchFor("G");
     }
 }
