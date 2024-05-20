@@ -1,0 +1,15 @@
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/bin/Debug/net8.0/SearchingAndSorting
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/bin/Debug/net8.0/SearchingAndSorting.deps.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/bin/Debug/net8.0/SearchingAndSorting.runtimeconfig.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/bin/Debug/net8.0/SearchingAndSorting.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/bin/Debug/net8.0/SearchingAndSorting.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.AssemblyInfoInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.AssemblyInfo.cs
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.csproj.CoreCompileInputs.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.sourcelink.json
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/refint/SearchingAndSorting.dll
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.pdb
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/SearchingAndSorting.genruntimeconfig.cache
+/Users/alancgregg/Desktop/elliots_stuff/progamin/MorePaper1Revision/SearchingAndSorting/SearchingAndSorting/obj/Debug/net8.0/ref/SearchingAndSorting.dll
