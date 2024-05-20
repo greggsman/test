@@ -194,7 +194,9 @@ class BinarySearchTree{
 */
 class BinarySearchTree : Binarytree{
     private string defaultNode;
+    private string rootNode;
     public BinarySearchTree(int defaultValue, string root) : base(defaultValue, root){
+        rootNode = root;
     }
     public override void AddNode(string additem)
     {
@@ -231,6 +233,25 @@ class BinarySearchTree : Binarytree{
             Console.WriteLine("Error occured, currentNodeIndex: {0}, additem: {1}", currentNodeIndex, additem);
         }
     }
+    public void SearchFor(string item){
+        string currentNode = rootNode;
+        int position = 0;
+        while(position != defaultIndex){
+            int comparison = string.Compare(item, currentNode);
+            if(comparison == 0){
+                Console.WriteLine("Found {0} at position {1}", item, position);
+                return;
+            }
+            else if(comparison < 0){
+                position = leftIndexes[position];
+            }
+            else{ // comparison > 0
+                position = rightIndexes[position];
+            }
+            currentNode = nodes[position]; 
+        }
+        Console.WriteLine("Couldn't find ur stupid item lol");
+    }
 }
 class Program
 {
@@ -244,5 +265,7 @@ class Program
         bst.AddNode("Q");
 
         bst.PrintAdjacencyList();
+        
+        bst.SearchFor("B");
     }
 }
