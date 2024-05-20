@@ -1,8 +1,5 @@
-﻿using System.Dynamic;
-using System.Reflection.Metadata;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
-
+﻿using System;
+using System.Collections.Generic;
 class UnDirectedWeightedStringGraph 
 {
     public List<string> nodes;
@@ -38,6 +35,14 @@ class UnDirectedWeightedStringGraph
         nodes.Add(node);
         AddColumnToEdges();
     }
+    private int GetNodeIndex(string node){
+        for(int i = 0; i < nodes.Count; i++){
+            if(node == nodes[i]){
+                return i;
+            }
+        }
+        return -1;
+    }
     public int GetConnection(int i, int j) { return adjacencyMatrix[i][j]; }
     public virtual void SetConnection(string node1, string node2, int value) 
     {
@@ -62,10 +67,10 @@ class UnDirectedWeightedStringGraph
             Console.WriteLine();
         }
     }
-    bool[] visited;
-    int[] distanceFromStart;
-    string[] previousVertex;
-    public void FindShortestPath(string start, string destination){
+    private bool[] visited;
+    private int[] distanceFromStart;
+    private string[] previousVertex;
+    public void Dijkstra(string start, string destination){
         int nodesCount = nodes.Count;
         visited = new bool[nodesCount];
         distanceFromStart = new int[nodesCount];
@@ -93,7 +98,7 @@ class UnDirectedWeightedStringGraph
             int currentSmallestDistance = int.MaxValue;
             for(int i = 0; i < nodes.Count; i++){
                 if(distanceFromStart[i] > 0){
-                    if(distanceFromStart[i] < currentSmallestDistance){                       
+                    if(distanceFromStart[i] < currentSmallestDistance && !visited[i]){                       
                         currentSmallestDistance = distanceFromStart[i];
                         shortestDistanceIndex = i;
                     }
@@ -101,10 +106,11 @@ class UnDirectedWeightedStringGraph
             }
             nodeToVisit = nodes[shortestDistanceIndex];
         }
+        Console.WriteLine("The shortest path from {0} to {1} is {2} with distance {3}", start, destination, DetermineShortestPath(start, destination), distanceFromStart[destinationIndex]);
     }
     private void Visit(string node){
-        Console.WriteLine("visiting " + node);
         int nodeIndex = GetNodeIndex(node);
+        visited[nodeIndex] = true;
         for(int i = 0; i < nodes.Count; i++){
             int connection = GetConnection(i, nodeIndex);
             if(!visited[i]){
@@ -112,32 +118,23 @@ class UnDirectedWeightedStringGraph
                     int newDistanceFromStart = distanceFromStart[nodeIndex] + connection;
                     if(newDistanceFromStart < distanceFromStart[i]){
                         distanceFromStart[i] = newDistanceFromStart;
+                        previousVertex[i] = node;
                     }
                 }
             }
         }
-        visited[nodeIndex] = true;
-        foreach(int distance in distanceFromStart){
-            if(distance == int.MaxValue){
-                Console.WriteLine("Inf");
-            }
-            else{
-                Console.WriteLine(distance);
-            }
-        }
     }
-    public int GetNodeIndex(string node){
-        for(int i = 0; i < nodes.Count; i++){
-            if(node == nodes[i]){
-                return i;
-            }
+    private string DetermineShortestPath(string start, string destination){
+        if(start == destination){
+            return destination;
         }
-        return -1;
+        int destinationIndex = GetNodeIndex(destination);
+        return DetermineShortestPath(start, previousVertex[destinationIndex]) + destination;
     }
 }
 class Program{
     static void Main(string[] args){
-        List<string> nodes = new List<string>() {"A", "B", "C", "D", "E", "F"};
+        List<string> nodes = new List<string>() {"A", "B", "C", "D", "E", "F", "G"};
         UnDirectedWeightedStringGraph graph = new UnDirectedWeightedStringGraph(nodes);
         graph.SetConnection("A", "B", 9);
         graph.SetConnection("A", "C", 5);
@@ -149,6 +146,6 @@ class Program{
         graph.SetConnection("E", "F", 3);
         graph.GetConnections();
 
-        graph.FindShortestPath("A", "F");
+        graph.Dijkstra("A", "F");
     }
 }
